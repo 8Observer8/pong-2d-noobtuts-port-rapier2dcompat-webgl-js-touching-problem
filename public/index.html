@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Example</title>
+</head>
+
+<body style="caret-color: transparent;">
+    <a href="https://github.com/dimforge/rapier.js/issues/240">Issue</a>
+
+    <p>See the console output</p>
+
+    <canvas id="renderCanvas" width="350" height="350"></canvas>
+
+    <!-- Since import maps are not yet supported by all browsers, its is
+        necessary to add the polyfill es-module-shims.js -->
+    <script async src="https://unpkg.com/es-module-shims@1.7.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "gl-matrix": "https://cdn.jsdelivr.net/npm/gl-matrix@3.4.3/+esm",
+                "rapier2d-compat": "https://cdn.jsdelivr.net/npm/@dimforge/rapier2d-compat@0.11.2/+esm"
+            }
+        }
+    </script>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
